@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  max-width: 100%;
+  width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f0f6fc;
+}
+
+h1 {
+  @apply text-3xl lg:text-4xl;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold text-slate-800 drop-shadow-lg;
+}
+
+p,
+li {
+  @apply text-slate-600;
+  line-height: 1.8;
+}
+
+.max-width {
+  @apply max-w-7xl mx-auto px-5 py-20;
+}
+
+.navbar {
+  @apply fixed -left-full transition duration-200 lg:relative lg:left-0;
+}
+
+.navbar.open {
+  @apply left-0 bg-white w-2/3 z-30 h-full px-5 pt-20 shadow-lg lg:bg-transparent lg:w-auto lg:z-auto lg:h-auto lg:px-0 lg:pt-0 lg:shadow-none;
+}
+
+.article {
+  @apply bg-white p-8 rounded shadow-lg;
 }
